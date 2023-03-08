@@ -3,16 +3,14 @@
 # rm old builds
 rm -rf ui/dist/
 rm -rf resources/
-rm -rf ./extension.tar
-
-sleep 3
+rm -f ./extension.tar
 
 # lets build
 cd ui
 yarn build
 
 # setup for psuh
-cp -rf dist/* ../
+cp -rf ui/dist/* .
 
 # git commit
 cd ..
