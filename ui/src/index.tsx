@@ -19,20 +19,15 @@ export const Extension = (props: {
 }) => {
   const [post, setPost] = React.useState(null);
 
-
-
-
-  React.useEffect(() => {
-    const data = fetch(baseURL, {
-      method: 'GET',
-      referrerPolicy: 'origin-when-cross-origin',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer f9bc946b-a894-406f-a563-98474047b5c7'
-      },
-    });
-    setPost(data);
-  }, []);
+  const data = fetch(baseURL, {
+    method: 'GET',
+    referrerPolicy: 'origin-when-cross-origin',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer f9bc946b-a894-406f-a563-98474047b5c7'
+    },
+  });
+  setPost(data);
 
   // React.useEffect(() => {
   //   reqInstance(baseURL).then((response: { data: any; }) => {
