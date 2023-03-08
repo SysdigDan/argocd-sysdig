@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const baseURL = 'https://app.au1.sysdig.com/api/scanning/runtime/v2/workflows/results?cursor&filter=kubernetes.namespace.name="sock-shop"&limit=100&order=desc&sort=runningVulnsBySev';
+const baseURL = '/api/scanning/runtime/v2/workflows/results?cursor&filter=kubernetes.namespace.name="sock-shop"&limit=100&order=desc&sort=runningVulnsBySev';
 
 export const Extension = (props: {
   tree: any;

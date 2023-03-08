@@ -39,14 +39,6 @@ const config = {
       },
     ],
   },
-  devServer: {
-    proxy: {
-      '/api': {
-        target: 'https://app.au1.sysdig.com',
-        changeOrigin: true,
-      }
-    }
-  },
 };
 
 module.exports = config;
