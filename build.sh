@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # rm old builds
 rm -rf ./ui/dist/
@@ -10,7 +10,6 @@ cd ui
 yarn build
 
 # setup for psuh
-sleep 5
 cp -rf ./ui/dist/* ./
 
 # git commit
