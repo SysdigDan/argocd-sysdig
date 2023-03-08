@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-const baseURL = 'http://192.168.101.101/app.au1.sysdig.com:443/api/scanning/runtime/v2/workflows/results?filter=kubernetes.namespace.name="sock-shop"';
+
+const baseURL = 'https://app.au1.sysdig.com/api/scanning/runtime/v2/workflows/results?filter=kubernetes.namespace.name="sock-shop"';
 const sysdigAuthToken = process.env.SYSDIG_AUTH_TOKEN
 console.log(sysdigAuthToken);
 
@@ -28,8 +29,17 @@ export const Extension = (props: {
     makeAPICall();
   }, [])
 
+  var data = require('./test_data.json');
+  console.log(data);
+
   return (
-    <div>Hello {props.resource.metadata.name}!</div>
+    <>
+      <div>Hello {props.resource.metadata.name}!</div>
+      <div>
+        Test Data {data}
+      </div>
+    </>
+
   );
 };
 
