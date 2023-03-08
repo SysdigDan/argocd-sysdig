@@ -2,7 +2,7 @@
     "compilerOptions": {
       "outDir": "./dist",
       "sourceMap": true,
-      "noImplicitAny": true,
+      "noImplicitAny": false,
       "module": "esnext",
       "target": "es5",
       "jsx": "react",
@@ -11,9 +11,8 @@
       "noUnusedLocals": true,
       "declaration": false,
       "allowSyntheticDefaultImports": true,
-      "lib": ["es2017", "dom"]
+      "lib": ["es2017", "dom"],
     },
     "include": ["./**/*"],
     "exclude": ["node_modules"]
-  } 
-  
+  }
