@@ -1,6 +1,6 @@
 const path = require('path');
 
-const groupKind = 'argoproj.io/Application';
+const groupKind = 'argoproj.io/Resource';
 
 const config = {
   entry: {
