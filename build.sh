@@ -10,6 +10,7 @@ cd ui
 yarn build
 
 # setup for psuh
+sleep 5
 cp -rf ui/dist/* ./
 
 # git commit
