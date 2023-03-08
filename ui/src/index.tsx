@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-const baseURL = 'https://cors-anywhere.herokuapp.com/https://app.au1.sysdig.com/api/scanning/runtime/v2/workflows/results?filter=kubernetes.namespace.name="sock-shop"';
+const baseURL = 'https://192.168.101.101:8080/https://app.au1.sysdig.com/api/scanning/runtime/v2/workflows/results?filter=kubernetes.namespace.name="sock-shop"';
+const sysdigAuthToken = process.env.SYSDIG_AUTH_TOKEN
 
 export const Extension = (props: {
   tree: any;
@@ -12,7 +13,7 @@ export const Extension = (props: {
     try {
       const response = await fetch(baseURL, {
         headers: {
-          'Authorization': 'Bearer f9bc946b-a894-406f-a563-98474047b5c7'
+          'Authorization': 'Bearer ' + sysdigAuthToken
         },
       });
       const data = await response.json();
