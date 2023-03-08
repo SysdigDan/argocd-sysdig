@@ -8,7 +8,7 @@ export const Extension = (props: {
   tree: any;
   resource: any
 }) => {
-  console.log(props);
+  console.log("DEBUG 1:", props);
 
   const makeAPICall = async () => {
     try {
@@ -30,24 +30,30 @@ export const Extension = (props: {
 
   var r = require('./test_data.json');
   var data = r.data;
-  console.log(data);
+  console.log("DEBUG 2:",data);
 
   var images = [];
-  for (let i = 0; i < data.images.length; i++) images.push(data.images[i].recordDetails.mainAssetName);
-  console.log(images);
-  
+  for (let i = 0; i < data.length; i++) images.push(data[i].recordDetails.mainAssetName);
+  console.log("DEBUG 3:", images);
+
   return (
     <>
       <div>Hello {props.resource.metadata.name}!</div>
       <table>
-        <thead>
-          <tr>
-            // header row
-          </tr>
-        </thead>
-        <tbody>
-            // body data
-        </tbody>
+        <tr>
+          <th>Name</th>
+          <th>Exploits</th>
+          <th>Status</th>
+        </tr>
+        {data.map((val: { recordDetail: { mainAssetName: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal; }; exploitCount: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal; policyEvaluationsResult: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal; }, key: React.Key) => {
+          return (
+            <tr key={key}>
+              <td>{val.recordDetail.mainAssetName}</td>
+              <td>{val.exploitCount}</td>
+              <td>{val.policyEvaluationsResult}</td>
+            </tr>
+          )
+        })}
       </table>
     </>
 
