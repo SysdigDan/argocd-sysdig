@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # rm old builds
-rm -rf dist/
-rm -rf ../resources/
-rm -rf ../extension.tar
+rm -rf ui/dist/
+rm -rf /resources/
+rm -rf /extension.tar
 
 sleep 3
 
