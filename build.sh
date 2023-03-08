@@ -10,7 +10,7 @@ cd ui
 yarn build
 
 # setup for psuh
-cp -rf ui/dist/ .
+cp -rf ui/dist/* ./
 
 # git commit
 cd ..
