@@ -12,4 +12,5 @@ yarn build
 cp -rf dist/* ../
 
 # git commit
+git add *
 git commit -m "updates"
