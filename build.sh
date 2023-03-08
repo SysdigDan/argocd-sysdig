@@ -6,6 +6,7 @@ rm -rf ../resources/
 rm -rf ../extension.tar
 
 # lets build
+cd ui
 yarn build
 
 # setup for psuh
@@ -15,3 +16,4 @@ cp -rf dist/* ../
 cd ..
 git add *
 git commit -m "updates"
+git push
