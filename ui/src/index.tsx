@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-
 const baseURL = 'https://app.au1.sysdig.com/api/scanning/runtime/v2/workflows/results?filter=kubernetes.namespace.name="sock-shop"';
 const sysdigAuthToken = process.env.SYSDIG_AUTH_TOKEN
 console.log(sysdigAuthToken);
@@ -29,15 +28,27 @@ export const Extension = (props: {
     makeAPICall();
   }, [])
 
-  var data = require('./test_data.json');
+  var r = require('./test_data.json');
+  var data = r.data;
   console.log(data);
 
+  var images = [];
+  for (let i = 0; i < data.images.length; i++) images.push(data.images[i].recordDetails.mainAssetName);
+  console.log(images);
+  
   return (
     <>
       <div>Hello {props.resource.metadata.name}!</div>
-      <div>
-        Test Data {data}
-      </div>
+      <table>
+        <thead>
+          <tr>
+            // header row
+          </tr>
+        </thead>
+        <tbody>
+            // body data
+        </tbody>
+      </table>
     </>
 
   );
