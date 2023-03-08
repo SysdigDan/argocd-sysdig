@@ -45,10 +45,10 @@ export const Extension = (props: {
           <th>Exploits</th>
           <th>Status</th>
         </tr>
-        {data.map((val: { recordDetail: { mainAssetName: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal; }; exploitCount: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal; policyEvaluationsResult: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal; }, key: React.Key) => {
+        {data.map((val: { recordDetails: { mainAssetName: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal; }; exploitCount: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal; policyEvaluationsResult: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal; }, key: React.Key) => {
           return (
             <tr key={key}>
-              <td>{val.recordDetail.mainAssetName}</td>
+              <td>{val.recordDetails.mainAssetName}</td>
               <td>{val.exploitCount}</td>
               <td>{val.policyEvaluationsResult}</td>
             </tr>
