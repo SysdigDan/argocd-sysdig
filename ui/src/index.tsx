@@ -16,7 +16,6 @@ export const Extension = (props: {
     const getData = async () => {
       try {
         const response = await fetch(baseURL, {
-            // mode: 'cors',
             headers: {
               'Authorization': 'Bearer f9bc946b-a894-406f-a563-98474047b5c7'
             },

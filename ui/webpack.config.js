@@ -1,6 +1,5 @@
 const path = require('path');
 
-// const groupKind = 'argoproj.io/Resource';
 const groupKind = 'argoproj.io/Application';
 
 const config = {
@@ -39,6 +38,14 @@ const config = {
         use: ['style-loader', 'raw-loader'],
       },
     ],
+  },
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'https://app.au1.sysdig.com',
+        changeOrigin: true,
+      }
+    }
   },
 };
 
