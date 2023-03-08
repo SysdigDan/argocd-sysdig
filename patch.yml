@@ -1,0 +1,15 @@
+---
+data:
+  application.links: |
+    - url: https://app.au1.sysdig.com/secure/#/vulnerabilities/runtime/?filter=kubernetes.namespace.name="{{.spec.destination.namespace}}"
+      title: Sysdig Vulnerability Management - Namespace Report
+  resource.links: |
+    # Sysdig Secure Deployment Report
+    - url: https://app.au1.sysdig.com/secure/#/vulnerabilities/runtime/?filter=kubernetes.namespace.name="{{.metadata.namespace}}"+and+kubernetes.workload.type="deployment"+and+kubernetes.workload.name="{{.metadata.name}}"
+      title: Sysdig Vulnerability Management - Workload Report
+      if: kind == "Deployment"
+    # Sysdig Secure Daemonset Report
+    - url: https://app.au1.sysdig.com/secure/#/vulnerabilities/runtime/?filter=kubernetes.namespace.name="{{.metadata.namespace}}"+and+kubernetes.workload.type="daemonset"+and+kubernetes.workload.name="{{.metadata.name}}"
+      title: Sysdig Vulnerability Management - Workload Report
+      if: kind == "DaemonSet"
+
