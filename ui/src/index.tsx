@@ -23,9 +23,11 @@ export const Extension = (props: {
     const data = fetch(baseURL, {
       method: 'GET',
       mode: 'no-cors',
+      redirect: 'follow',
       headers: {
-        Authorization: 'Bearer f9bc946b-a894-406f-a563-98474047b5c7',
-      }
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer f9bc946b-a894-406f-a563-98474047b5c7'
+      },
     });
     setPost(data);
   }, []);
