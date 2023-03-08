@@ -80,6 +80,7 @@ export const Extension = (props: {
           style={{
             display: "flex",
             flexDirection: "row",
+            justifyContent: "space-evenly",
           }}
         >
           {Object.keys(MAP_VULN).map((key) => (
