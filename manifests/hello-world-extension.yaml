@@ -8,4 +8,4 @@ metadata:
 spec:
   sources:
     - web:
-        url: https://github.com/sysdigdan/argocd-sysdig/releases/download/v0.0.1/extension.tar
+        url: https://github.com/sysdigdan/argocd-sysdig/releases/download/v0.0.2/extension.tar
