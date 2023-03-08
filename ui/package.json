@@ -20,5 +20,6 @@
     "typescript": "^4.4.3",
     "webpack": "^4.7.2",
     "webpack-cli": "^4.7.2"
-  }
+  },
+  "proxy": "https://app.au1.sysdig.com"
 }
