@@ -5,6 +5,8 @@ rm -rf dist/
 rm -rf ../resources/
 rm -rf ../extension.tar
 
+sleep 3
+
 # lets build
 cd ui
 yarn build
