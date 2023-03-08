@@ -3,7 +3,6 @@
 ## New Installation
 ```
 helm upgrade argocd --namespace argocd \
---set server.extensions.enabled=true \
 --set server.service.type=LoadBalancer \
 --set server.ingress.enabled=true \
 argo/argo-cd
