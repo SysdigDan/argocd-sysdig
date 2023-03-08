@@ -2,11 +2,9 @@ apiVersion: argoproj.io/v1alpha1
 kind: ArgoCDExtension
 metadata:
   name: sysdig-vuln-mgmt
-  labels:
-    tab: "Resource"
   finalizers:
     - extensions-finalizer.argocd.argoproj.io
 spec:
   sources:
     - web:
-        url: https://github.com/sysdigdan/argocd-sysdig/releases/download/v0.0.3/extension.tar
+        url: https://github.com/sysdigdan/argocd-sysdig/releases/download/v0.0.5/extension.tar

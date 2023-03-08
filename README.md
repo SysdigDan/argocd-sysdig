@@ -33,3 +33,6 @@ helm upgrade argocd --namespace argocd \
 argo/argo-cd
 ```
 
+```
+kubectl -n argocd apply -f ../manifests/hello-world-extension.yaml
+```
