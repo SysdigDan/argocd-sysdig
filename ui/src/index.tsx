@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const baseURL = 'https://app.au1.sysdig.com/api/scanning/runtime/v2/workflows/results?callback=foo&filter=kubernetes.namespace.name="sock-shop"';
+const baseURL = 'https://cors-anywhere.herokuapp.com/https://app.au1.sysdig.com/api/scanning/runtime/v2/workflows/results?filter=kubernetes.namespace.name="sock-shop"';
 
 export const Extension = (props: {
   tree: any;
@@ -8,37 +8,22 @@ export const Extension = (props: {
 }) => {
   console.log(props);
 
-  const [data, setData] = React.useState(null);
-  const [loading, setLoading] = React.useState(true);
-  const [error, setError] = React.useState(null);
-
-  React.useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await fetch(baseURL, {
-            headers: {
-              'Authorization': 'Bearer f9bc946b-a894-406f-a563-98474047b5c7'
-            },
-        });
-        if (!response.ok) {
-          throw new Error(
-            `This is an HTTP error: The status is ${response.status}`
-          );
-        }
-        let actualData = await response.json();
-        setData(actualData);
-        console.log(data);
-        setError(null);
-      } catch (err) {
-        setError(err.message);
-        console.log(error);
-        setData(null);
-      } finally {
-        setLoading(false);
-        console.log(loading);
-      }
+  const makeAPICall = async () => {
+    try {
+      const response = await fetch(baseURL, {
+        headers: {
+          'Authorization': 'Bearer f9bc946b-a894-406f-a563-98474047b5c7'
+        },
+      });
+      const data = await response.json();
+      console.log({ data })
     }
-    getData()
+    catch (e) {
+      console.log(e)
+    }
+  }
+  React.useEffect(() => {
+    makeAPICall();
   }, [])
 
   return (

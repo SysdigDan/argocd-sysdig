@@ -1,5 +1,6 @@
 {
   "data": {
+    "extension.config": "extensions:\n- name: sysdig\n  backend:\n    connectionTimeout: 2s\n    keepAlive: 15s\n    idleConnectionTimeout: 60s\n    maxIdleConnections: 30\n    services:\n    - url: https://app.au1.sysdig.com\n",
     "application.links": "- url: https://app.au1.sysdig.com/secure/#/vulnerabilities/runtime/?filter=kubernetes.namespace.name=\"{{.spec.destination.namespace}}\"\n  title: Sysdig Vulnerability Management - Namespace Report\n",
     "resource.links": "# Sysdig Secure Deployment Report\n- url: https://app.au1.sysdig.com/secure/#/vulnerabilities/runtime/?filter=kubernetes.namespace.name=\"{{.metadata.namespace}}\"+and+kubernetes.workload.type=\"deployment\"+and+kubernetes.workload.name=\"{{.metadata.name}}\"\n  title: Sysdig Vulnerability Management - Workload Report\n  if: kind == \"Deployment\"\n# Sysdig Secure Daemonset Report\n- url: https://app.au1.sysdig.com/secure/#/vulnerabilities/runtime/?filter=kubernetes.namespace.name=\"{{.metadata.namespace}}\"+and+kubernetes.workload.type=\"daemonset\"+and+kubernetes.workload.name=\"{{.metadata.name}}\"\n  title: Sysdig Vulnerability Management - Workload Report\n  if: kind == \"DaemonSet\"\n"
   }

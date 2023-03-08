@@ -18,7 +18,8 @@ argocd app create fluentd --repo https://github.com/sysdigdan/argocd-example-app
 # Deep Link Installation
 
 ```
-kubectl -n argocd patch configmaps/argocd-cm --type merge --patch-file argocd-sysdig-patch.json
+kubectl -n argocd patch configmaps argocd-cmd-params-cm --type merge --patch-file patches/argocd-cmd-params-cm.yaml
+kubectl -n argocd patch configmaps argocd-cm --type merge --patch-file patches/argocd-cm.yaml
 kubectl -n argocd rollout restart deployment argocd-server
 ```
 

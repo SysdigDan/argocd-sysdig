@@ -1,5 +1,15 @@
 ---
 data:
+  extension.config: |
+    extensions:
+    - name: sysdig
+      backend:
+        connectionTimeout: 2s
+        keepAlive: 15s
+        idleConnectionTimeout: 60s
+        maxIdleConnections: 30
+        services:
+        - url: https://app.au1.sysdig.com
   application.links: |
     - url: https://app.au1.sysdig.com/secure/#/vulnerabilities/runtime/?filter=kubernetes.namespace.name="{{.spec.destination.namespace}}"
       title: Sysdig Vulnerability Management - Namespace Report
