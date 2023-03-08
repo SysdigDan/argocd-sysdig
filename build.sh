@@ -2,8 +2,8 @@
 
 # rm old builds
 rm -rf ui/dist/
-rm -rf /resources/
-rm -rf /extension.tar
+rm -rf resources/
+rm -rf ./extension.tar
 
 sleep 3
 
