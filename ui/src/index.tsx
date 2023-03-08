@@ -17,28 +17,43 @@ export const Extension = (props: {
   tree: any;
   resource: any
 }) => {
-  const [post, setPost] = React.useState(null);
-
-  const data = fetch(baseURL, {
-    method: 'GET',
-    referrerPolicy: 'origin-when-cross-origin',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer f9bc946b-a894-406f-a563-98474047b5c7'
-    },
-  });
-  setPost(data);
-
-  // React.useEffect(() => {
-  //   reqInstance(baseURL).then((response: { data: any; }) => {
-  //     setPost(response.data);
-  //   });
-  // }, []);
-
-  if (!post) return null;
-
   console.log(props);
-  console.log(post);
+
+  const [data, setData] = React.useState(null);
+  const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState(null);
+
+  React.useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await fetch(
+          baseURL, {
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer f9bc946b-a894-406f-a563-98474047b5c7'
+            },
+          }
+        );
+        if (!response.ok) {
+          throw new Error(
+            `This is an HTTP error: The status is ${response.status}`
+          );
+        }
+        let actualData = await response.json();
+        setData(actualData);
+        console.log(data);
+        setError(null);
+      } catch (err) {
+        setError(err.message);
+        console.log(error);
+        setData(null);
+      } finally {
+        setLoading(false);
+        console.log(loading);
+      }
+    }
+    getData()
+  }, [])
 
   return (
     <div>Hello {props.resource.metadata.name}!</div>
