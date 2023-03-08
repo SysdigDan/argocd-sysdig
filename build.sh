@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # rm old builds
-rm -rf ui/dist/
-rm -rf resources/
+rm -rf ./ui/dist/
+rm -rf ./resources/
 rm -f ./extension.tar
 
 # lets build
@@ -11,7 +11,7 @@ yarn build
 
 # setup for psuh
 sleep 5
-cp -rf ui/dist/* ./
+cp -rf ./ui/dist/* ./
 
 # git commit
 cd ..
