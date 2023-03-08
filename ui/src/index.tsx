@@ -15,15 +15,12 @@ export const Extension = (props: {
   React.useEffect(() => {
     const getData = async () => {
       try {
-        const response = await fetch(
-          baseURL, {
-            mode: 'cors',
+        const response = await fetch(baseURL, {
+            // mode: 'cors',
             headers: {
-              'Content-Type': 'application/json',
               'Authorization': 'Bearer f9bc946b-a894-406f-a563-98474047b5c7'
             },
-          }
-        );
+        });
         if (!response.ok) {
           throw new Error(
             `This is an HTTP error: The status is ${response.status}`

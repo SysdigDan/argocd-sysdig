@@ -4,6 +4,7 @@ const path = require('path');
 const groupKind = 'argoproj.io/Application';
 
 const config = {
+  mode: 'development',
   entry: {
     extension: './src/index.tsx',
   },
