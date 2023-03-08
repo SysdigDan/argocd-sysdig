@@ -3,31 +3,26 @@ import * as React from 'react';
 const MAP_VULN = {
   Critical: {
     name: "fa-heart",
-    title: "Critical",
     spin: false,
     color: "rgb(24, 190, 148)"
   },
   High: {
     name: "fa-heart-broken",
-    title: "High",
     spin: false,
     color: "rgb(233, 109, 118)",
   },
   Medium: {
     name: "fa-pause-circle",
-    title: "Medium",
     spin: false,
     color: "rgb(118, 111, 148)",
   },
   Low: {
     name: "fa-ghost",
-    title: "Low",
     spin: false,
     color: "rgb(244, 192, 48)"
   },
   Negligible: {
     name: "fa-question-circle",
-    title: "Negligible",
     spin: false,
     color: "rgb(204, 214, 221)",
   },
@@ -98,13 +93,14 @@ export const Extension = (props: {
             >
               <i
                 qe-id="utils-health-status-title"
-                title={`${MAP_VULN[key].title}`}
+                title={key}
                 className={`fa ${MAP_VULN[key].name}`}
                 style={{
                   color: MAP_VULN[key].color,
                   marginBottom: "0.50rem",
                 }}
               ></i>
+              {key}:
               {/* {key}: {items.filter((item) => item.health.status == key).length} */}
             </div>
           ))}
