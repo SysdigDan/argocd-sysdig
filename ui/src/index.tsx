@@ -19,11 +19,13 @@ export const Extension = (props: {
 }) => {
   const [post, setPost] = React.useState(null);
 
+
+
+
   React.useEffect(() => {
     const data = fetch(baseURL, {
       method: 'GET',
-      mode: 'no-cors',
-      redirect: 'follow',
+      referrerPolicy: 'origin-when-cross-origin',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer f9bc946b-a894-406f-a563-98474047b5c7'
