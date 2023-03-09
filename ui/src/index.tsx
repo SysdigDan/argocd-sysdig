@@ -115,7 +115,16 @@ export const Extension = (props: {
           ))}
         </div>
       </div>
-      <div>
+      <div
+        style={{
+          background: "#fff",
+          width: "100%",
+          boxShadow: "1px 1px 1px #ccd6dd",
+          borderRadius: "4px",
+          border: "1px solid transparent",
+          margin: "15px",
+        }}
+      >
         <table>
           <tr>
             <th>Name</th>
