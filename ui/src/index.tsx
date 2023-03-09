@@ -127,7 +127,7 @@ export const Extension = (props: {
       <div style={{ display: "flex", flexDirection: "column", width: "40%" }}>
         {data.map((val, key) => (
           <div
-            title={`Name: ${val.recordDetails.mainAssetName}`}
+            title={`Workload: ${val.labels.kubernetes.workload.name}`}
             style={{
               marginTop: "2rem",
               padding: "0.2rem",
@@ -153,6 +153,7 @@ export const Extension = (props: {
                 workload
               </div>
             </div>
+
             <div
               style={{
                 flexGrow: 100,
@@ -186,7 +187,8 @@ export const Extension = (props: {
                 </a>
               </div> */}
             </div>
-            {/* <div style={{ flexGrow: 1, alignSelf: "flex-end" }}>
+
+            <div style={{ flexGrow: 1, alignSelf: "flex-end" }}>
               {key.createdAt ? (
                 <Moment
                   style={{
@@ -205,7 +207,8 @@ export const Extension = (props: {
                   {key.createdAt}
                 </Moment>
               ) : null}
-            </div> */}
+            </div>
+
           </div>
         ))}
       </div>
