@@ -1,5 +1,6 @@
 import * as React from 'react';
 // import Moment from "react-moment";
+import "./custom.css";
 
 const MAP_VULN = {
   Critical: {
@@ -127,7 +128,6 @@ export const Extension = (props: {
       <div style={{ display: "flex", flexDirection: "column" }}>
         {data.map((val, key) => (
           <div
-            // title={`Workload: ${val.recordDetails.labels.kubernetes.workload.name}`}
             title={`Workload: ${val.recordDetails.labels["kubernetes.workload.name"]}`}
             style={{
               marginTop: "2rem",
@@ -148,7 +148,7 @@ export const Extension = (props: {
                 textAlign: "center",
               }}
             >
-              <i title="Workload" className="icon argo-icon-application"></i>
+              <i title="Workload" className="icon argo-icon-pod"></i>
               <br />
               <div style={{ fontSize: ".7em", color: "#6d7f8b" }}>
                 workload
@@ -174,8 +174,8 @@ export const Extension = (props: {
                   textAlign: "left",
                 }}
               >
-                Workload Name: {val.recordDetails.labels["kubernetes.workload.name"]}
-                Image Name: {val.recordDetails.mainAssetName}
+                <div>Workload Name:</div>
+                <div>{val.recordDetails.labels["kubernetes.workload.name"]}</div>
               </div>
 
               <div
@@ -202,27 +202,6 @@ export const Extension = (props: {
                 </a>
               </div> */}
             </div>
-
-            {/* <div style={{ flexGrow: 1, alignSelf: "flex-end" }}>
-              {key.createdAt ? (
-                <Moment
-                  style={{
-                    backgroundColor: "#ccd6dd",
-                    color: "#495763",
-                    border: "1px solid #8fa4b1",
-                    borderRadius: "5px",
-                    padding: "0 5px",
-                    fontSize: ".6em",
-                    textTransform: "lowercase",
-                    marginRight: "1px",
-                  }}
-                  fromNow={true}
-                  ago={true}
-                >
-                  {key.createdAt}
-                </Moment>
-              ) : null}
-            </div> */}
 
           </div>
         ))}
