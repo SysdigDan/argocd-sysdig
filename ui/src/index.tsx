@@ -124,7 +124,7 @@ export const Extension = (props: {
         </div>
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column", width: "40%" }}>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         {data.map((val, key) => (
           <div
             // title={`Workload: ${val.recordDetails.labels.kubernetes.workload.name}`}
@@ -167,14 +167,21 @@ export const Extension = (props: {
               <div
                 style={{
                   fontSize: ".8em",
+                  fontWeight: "bold",
                   paddingBottom: "5px",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
                   textAlign: "left",
                 }}
               >
-                {val.recordDetails.labels["kubernetes.workload.name"]}
+                Workload Name: {val.recordDetails.labels["kubernetes.workload.name"]}
+                Image Name: {val.recordDetails.mainAssetName}
               </div>
+
+              <div>
+
+              </div>
+
               {/* <div style={{ fontSize: ".8em" }}>
                 <i
                   qe-id="utils-health-status-title"
