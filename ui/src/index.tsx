@@ -164,30 +164,30 @@ export const Extension = (props: {
                 flexDirection: "column",
               }}
             >
-              <div
-                style={{
-                  fontSize: "1em",
-                  fontWeight: "bold",
-                  paddingBottom: "5px",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                  textAlign: "left",
-                }}
-              >
-                <div>Workload Name:</div>
-                <div>{val.recordDetails.labels["kubernetes.workload.name"]}</div>
+              <div>
+                <div
+                  style={{
+                    fontSize: "1em",
+                    fontWeight: "bold",
+                    paddingBottom: "15px",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    textAlign: "left",
+                  }}>
+                  Workload Name: {val.recordDetails.labels["kubernetes.workload.name"]}</div>
+                <div
+                  style={{
+                    fontSize: ".8em",
+                    paddingBottom: "5px",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    textAlign: "left",
+                  }}>
+                  Image Name: {val.recordDetails.mainAssetName}
+                </div>
               </div>
 
-              <div
-                style={{
-                  fontSize: ".8em",
-                  paddingBottom: "5px",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                  textAlign: "left",
-                }}>
-                Image Name: {val.recordDetails.mainAssetName}
-              </div>
+
 
               {/* <div style={{ fontSize: ".8em" }}>
                 <i
