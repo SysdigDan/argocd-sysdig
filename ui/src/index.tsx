@@ -156,9 +156,9 @@ export const Extension = (props: {
             </tr>
           </div>
 
-          <div>
-            {data.map((val, key) => {
-              return (
+          {data.map((val, key) => {
+            return (
+              <div>
                 <tr key={key}>
                   <td>{val.recordDetails.mainAssetName}</td>
                   <td>{val.runningVulnsBySev[0] + val.runningVulnsBySev[1] + val.runningVulnsBySev[2]}</td>
@@ -169,9 +169,9 @@ export const Extension = (props: {
                   <td>{val.exploitCount}</td>
                   <td>{val.policyEvaluationsResult}</td>
                 </tr>
-              )
-            })}
-          </div>
+              </div>
+            )
+          })}
 
         </table>
       </div>
