@@ -169,12 +169,24 @@ export const Extension = (props: {
                   style={{
                     fontSize: "1em",
                     fontWeight: "bold",
+                    paddingBottom: "5px",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    textAlign: "left",
+                  }}>
+                  {val.recordDetails.labels["kubernetes.workload.name"]}
+                </div>
+                <div
+                  style={{
+                    fontSize: ".8em",
                     paddingBottom: "15px",
                     overflow: "hidden",
                     textOverflow: "ellipsis",
                     textAlign: "left",
                   }}>
-                  Workload Name: {val.recordDetails.labels["kubernetes.workload.name"]}</div>
+                  Image: {val.recordDetails.mainAssetName}<br />
+                </div>
+
                 <div
                   style={{
                     fontSize: ".8em",
@@ -183,11 +195,33 @@ export const Extension = (props: {
                     textOverflow: "ellipsis",
                     textAlign: "left",
                   }}>
-                  Image Name: {val.recordDetails.mainAssetName}
+                  Namespace: {val.recordDetails.labels["kubernetes.namespace.name"]}<br />
+                  Cluster: {val.recordDetails.labels["kubernetes.cluster.name"]}<br/>
                 </div>
               </div>
 
-
+              <div>
+                <div
+                  style={{
+                    fontSize: "1em",
+                    fontWeight: "bold",
+                    paddingBottom: "15px",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    textAlign: "left",
+                  }}>
+                  {val.recordDetails.labels["kubernetes.workload.name"]}</div>
+                <div
+                  style={{
+                    fontSize: ".8em",
+                    paddingBottom: "5px",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    textAlign: "left",
+                  }}>
+                  Image: {val.recordDetails.mainAssetName}
+                </div>
+              </div>
 
               {/* <div style={{ fontSize: ".8em" }}>
                 <i
