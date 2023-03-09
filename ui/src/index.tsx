@@ -109,10 +109,11 @@ export const Extension = (props: {
               <i
                 qe-id="utils-health-status-title"
                 title={key}
-                className={`fa ${MAP_VULN[key].name}`}
+                className={`fa fa-xl ${MAP_VULN[key].name}`}
                 style={{
                   color: MAP_VULN[key].color,
-                  marginBottom: "0.50rem",
+                  marginBottom: "1rem",
+                  marginTop: "1rem",
                 }}
               ></i>
               {key}:
@@ -133,16 +134,20 @@ export const Extension = (props: {
           marginBottom: "10px",
         }}
       >
-        <table>
+        <table
+          style={{
+            width: "100%",
+          }}
+        >
           <tr>
             <th>Name</th>
-            <th>Criical</th>
-            <th>High</th>
-            <th>Medium</th>
-            <th>Low</th>
-            <th>Negligible</th>
-            <th>Exploits</th>
-            <th>Status</th>
+            <th style={{textAlign: "center"}}>Criical</th>
+            <th style={{ textAlign: "center" }}>High</th>
+            <th style={{ textAlign: "center" }}>Medium</th>
+            <th style={{ textAlign: "center" }}>Low</th>
+            <th style={{ textAlign: "center" }}>Negligible</th>
+            <th style={{ textAlign: "center" }}>Exploits</th>
+            <th style={{ textAlign: "center" }}>Status</th>
           </tr>
           {data.map((val, key) => {
             return (
