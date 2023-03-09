@@ -66,7 +66,14 @@ export const Extension = (props: {
 
   return (
     <>
-      <div>Sysdig Vulnerability Report - Application {props.resource.metadata.name}</div>
+      <div
+        style={{
+          fontSize: "15px",
+          textTransform: "uppercase",
+          textAlign: "center",
+        }}
+      >
+        Sysdig Vulnerability Report - Application {props.resource.metadata.name}</div>
       <div
         style={{
           background: "#fff",
@@ -74,6 +81,7 @@ export const Extension = (props: {
           boxShadow: "1px 1px 1px #ccd6dd",
           borderRadius: "4px",
           border: "1px solid transparent",
+          margin: "15px",
         }}
       >
         <div
