@@ -225,9 +225,9 @@ export const Extension = (props: {
                   <div
                     style={{
                       margin: "1rem",
-                      // textAlign: "center",
+                      textAlign: "center",
                       display: "flex",
-                      justifyContent: "space-evenly",
+                      flexDirection: "column",
                     }}
                   >
                     <i
