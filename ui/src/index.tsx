@@ -139,26 +139,23 @@ export const Extension = (props: {
             width: "inherit",
           }}
         >
+          <tr
+            style={{
+              height: "35px",
+            }}
+          >
+            <th>Name</th>
+            <th style={{textAlign: "center"}}>Criical</th>
+            <th style={{ textAlign: "center" }}>High</th>
+            <th style={{ textAlign: "center" }}>Medium</th>
+            <th style={{ textAlign: "center" }}>Low</th>
+            <th style={{ textAlign: "center" }}>Negligible</th>
+            <th style={{ textAlign: "center" }}>Exploits</th>
+            <th style={{ textAlign: "center" }}>Status</th>
+          </tr>
           <div>
-            <tr
-              style={{
-                height: "35px",
-              }}
-            >
-              <th>Name</th>
-              <th style={{ textAlign: "center" }}>Criical</th>
-              <th style={{ textAlign: "center" }}>High</th>
-              <th style={{ textAlign: "center" }}>Medium</th>
-              <th style={{ textAlign: "center" }}>Low</th>
-              <th style={{ textAlign: "center" }}>Negligible</th>
-              <th style={{ textAlign: "center" }}>Exploits</th>
-              <th style={{ textAlign: "center" }}>Status</th>
-            </tr>
-          </div>
-
-          {data.map((val, key) => {
-            return (
-              <div>
+            {data.map((val, key) => {
+              return (
                 <tr key={key}>
                   <td>{val.recordDetails.mainAssetName}</td>
                   <td>{val.runningVulnsBySev[0] + val.runningVulnsBySev[1] + val.runningVulnsBySev[2]}</td>
@@ -169,9 +166,9 @@ export const Extension = (props: {
                   <td>{val.exploitCount}</td>
                   <td>{val.policyEvaluationsResult}</td>
                 </tr>
-              </div>
-            )
-          })}
+              )
+            })}
+          </div>
 
         </table>
       </div>
