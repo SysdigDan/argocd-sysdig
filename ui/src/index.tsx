@@ -127,7 +127,7 @@ export const Extension = (props: {
       <div style={{ display: "flex", flexDirection: "column", width: "40%" }}>
         {data.map((val, key) => (
           <div
-            title={`Name: ${val.mainAssetName}`}
+            title={`Name: ${val.recordDetails.mainAssetName}`}
             style={{
               marginTop: "2rem",
               padding: "0.2rem",
@@ -171,7 +171,7 @@ export const Extension = (props: {
                   textAlign: "left",
                 }}
               >
-                {val.mainAssetName}
+                {val.recordDetails.mainAssetName}
               </div>
               {/* <div style={{ fontSize: ".8em" }}>
                 <i
