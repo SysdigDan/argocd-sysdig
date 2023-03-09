@@ -165,14 +165,12 @@ export const Extension = (props: {
                 flexGrow: 100,
                 padding: "5px",
                 lineHeight: ".95",
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-evenly",
               }}
             >
-              <div
-                style={{
-                  float: "left",
-                  paddingRight: "25px"
-                }}
-              >
+              <div style={{ paddingRight: "25px" }}>
                 <div
                   style={{
                     fontSize: "1em",
@@ -217,7 +215,7 @@ export const Extension = (props: {
                   }}>
                   Namespace: {val.recordDetails.labels["kubernetes.namespace.name"]}
                 </div>
-
+                
               </div>
 
               <div>

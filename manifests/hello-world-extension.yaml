@@ -7,4 +7,4 @@ metadata:
 spec:
   sources:
     - web:
-        url: https://github.com/sysdigdan/argocd-sysdig/releases/download/v0.0.51/extension.tar
+        url: https://github.com/sysdigdan/argocd-sysdig/releases/download/v0.0.55/extension.tar
