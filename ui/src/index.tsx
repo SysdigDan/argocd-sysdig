@@ -220,20 +220,6 @@ export const Extension = (props: {
               <div>
               </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
               {/* <div style={{ fontSize: ".8em" }}>
                 <i
                   qe-id="utils-health-status-title"
