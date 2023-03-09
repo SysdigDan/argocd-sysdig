@@ -136,33 +136,43 @@ export const Extension = (props: {
       >
         <table
           style={{
-            width: "100%",
+            width: "inherit",
           }}
         >
-          <tr>
-            <th>Name</th>
-            <th style={{textAlign: "center"}}>Criical</th>
-            <th style={{ textAlign: "center" }}>High</th>
-            <th style={{ textAlign: "center" }}>Medium</th>
-            <th style={{ textAlign: "center" }}>Low</th>
-            <th style={{ textAlign: "center" }}>Negligible</th>
-            <th style={{ textAlign: "center" }}>Exploits</th>
-            <th style={{ textAlign: "center" }}>Status</th>
-          </tr>
-          {data.map((val, key) => {
-            return (
-              <tr key={key}>
-                <td>{val.recordDetails.mainAssetName}</td>
-                <td>{val.runningVulnsBySev[0] + val.runningVulnsBySev[1] + val.runningVulnsBySev[2]}</td>
-                <td>{val.runningVulnsBySev[3]}</td>
-                <td>{val.runningVulnsBySev[4] + val.runningVulnsBySev[5]}</td>
-                <td>{val.runningVulnsBySev[6]}</td>
-                <td>{val.runningVulnsBySev[7]}</td>
-                <td>{val.exploitCount}</td>
-                <td>{val.policyEvaluationsResult}</td>
-              </tr>
-            )
-          })}
+          <div>
+            <tr
+              style={{
+                height: "35px",
+              }}
+            >
+              <th>Name</th>
+              <th style={{ textAlign: "center" }}>Criical</th>
+              <th style={{ textAlign: "center" }}>High</th>
+              <th style={{ textAlign: "center" }}>Medium</th>
+              <th style={{ textAlign: "center" }}>Low</th>
+              <th style={{ textAlign: "center" }}>Negligible</th>
+              <th style={{ textAlign: "center" }}>Exploits</th>
+              <th style={{ textAlign: "center" }}>Status</th>
+            </tr>
+          </div>
+
+          <div>
+            {data.map((val, key) => {
+              return (
+                <tr key={key}>
+                  <td>{val.recordDetails.mainAssetName}</td>
+                  <td>{val.runningVulnsBySev[0] + val.runningVulnsBySev[1] + val.runningVulnsBySev[2]}</td>
+                  <td>{val.runningVulnsBySev[3]}</td>
+                  <td>{val.runningVulnsBySev[4] + val.runningVulnsBySev[5]}</td>
+                  <td>{val.runningVulnsBySev[6]}</td>
+                  <td>{val.runningVulnsBySev[7]}</td>
+                  <td>{val.exploitCount}</td>
+                  <td>{val.policyEvaluationsResult}</td>
+                </tr>
+              )
+            })}
+          </div>
+
         </table>
       </div>
     </>
