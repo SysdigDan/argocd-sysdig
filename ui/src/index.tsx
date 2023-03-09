@@ -125,7 +125,12 @@ export const Extension = (props: {
         </div>
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column"
+        }}
+      >
         {data.map((val, key) => (
           <div
             title={`Workload: ${val.recordDetails.labels["kubernetes.workload.name"]}`}
@@ -158,13 +163,13 @@ export const Extension = (props: {
             <div
               style={{
                 flexGrow: 100,
-                padding: "10px 20px 10px 10px",
+                padding: "5px",
                 lineHeight: ".95",
                 display: "flex",
                 flexDirection: "row",
               }}
             >
-              <div>
+              <div style={{ paddingRight: "25px" }}>
                 <div
                   style={{
                     fontSize: "1em",
@@ -248,9 +253,18 @@ export const Extension = (props: {
 
           </div>
         ))}
+
       </div>
 
-      <div
+
+
+
+
+
+
+
+
+      {/* <div
         style={{
           background: "#fff",
           width: "100%",
@@ -298,7 +312,7 @@ export const Extension = (props: {
           </div>
 
         </table>
-      </div>
+      </div> */}
     </>
 
   );
