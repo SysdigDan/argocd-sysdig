@@ -127,7 +127,8 @@ export const Extension = (props: {
       <div style={{ display: "flex", flexDirection: "column", width: "40%" }}>
         {data.map((val, key) => (
           <div
-            title={`Workload: ${val.labels.kubernetes.workload.name}`}
+            // title={`Workload: ${val.labels.kubernetes.workload.name}`}
+            title={`Workload: ${val.labels["kubernetes.workload.name"]}`}
             style={{
               marginTop: "2rem",
               padding: "0.2rem",
@@ -172,7 +173,7 @@ export const Extension = (props: {
                   textAlign: "left",
                 }}
               >
-                {val.recordDetails.mainAssetName}
+                {val.recordDetails.kubernetes.workload.name}
               </div>
               {/* <div style={{ fontSize: ".8em" }}>
                 <i
