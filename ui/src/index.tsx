@@ -166,7 +166,7 @@ export const Extension = (props: {
             >
               <div
                 style={{
-                  fontSize: ".8em",
+                  fontSize: "1em",
                   fontWeight: "bold",
                   paddingBottom: "5px",
                   overflow: "hidden",
@@ -178,8 +178,15 @@ export const Extension = (props: {
                 Image Name: {val.recordDetails.mainAssetName}
               </div>
 
-              <div>
-
+              <div
+                style={{
+                  fontSize: ".8em",
+                  paddingBottom: "5px",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  textAlign: "left",
+                }}>
+                Image Name: {val.recordDetails.mainAssetName}
               </div>
 
               {/* <div style={{ fontSize: ".8em" }}>
