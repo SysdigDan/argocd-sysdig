@@ -32,12 +32,13 @@ const MAP_VULN = {
 
 const baseURL = 'https://app.au1.sysdig.com/api/scanning/runtime/v2/workflows/results?filter=kubernetes.namespace.name="sock-shop"';
 const sysdigAuthToken = process.env.SYSDIG_AUTH_TOKEN
-console.log("DEBUG 1:", sysdigAuthToken);
+
 
 export const Extension = (props: {
   tree: any;
   resource: any
 }) => {
+  console.log("DEBUG 1:", sysdigAuthToken);
   console.log("DEBUG 2:", props);
 
   const makeAPICall = async () => {
@@ -217,7 +218,6 @@ export const Extension = (props: {
 
               </div>
 
-
               <div
                 style={{
                   display: "flex",
@@ -266,7 +266,6 @@ export const Extension = (props: {
             </div>
 
           </div>
-
 
         ))}
 
