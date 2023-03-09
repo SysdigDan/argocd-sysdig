@@ -170,10 +170,11 @@ export const Extension = (props: {
                 flexDirection: "row",
               }}
             >
-              <div style={{
-                paddingRight: "25px",
-                flexGrow: 1,
-                }}
+              <div
+                style={{
+                  paddingRight: "25px",
+                  flexGrow: 1,
+                  }}
               >
                 <div
                   style={{
@@ -183,7 +184,8 @@ export const Extension = (props: {
                     overflow: "hidden",
                     textOverflow: "ellipsis",
                     textAlign: "left",
-                  }}>
+                  }}
+                >
                   {val.recordDetails.labels["kubernetes.workload.name"]}
                 </div>
 
@@ -194,7 +196,8 @@ export const Extension = (props: {
                     overflow: "hidden",
                     textOverflow: "ellipsis",
                     textAlign: "left",
-                  }}>
+                  }}
+                >
                   Image: {val.recordDetails.mainAssetName}
                 </div>
 
@@ -205,7 +208,8 @@ export const Extension = (props: {
                     overflow: "hidden",
                     textOverflow: "ellipsis",
                     textAlign: "left",
-                  }}>
+                  }}
+                >
                   Cluster: {val.recordDetails.labels["kubernetes.cluster.name"]}
                 </div>
 
@@ -216,10 +220,10 @@ export const Extension = (props: {
                     overflow: "hidden",
                     textOverflow: "ellipsis",
                     textAlign: "left",
-                  }}>
+                  }}
+                >
                   Namespace: {val.recordDetails.labels["kubernetes.namespace.name"]}
                 </div>
-
               </div>
 
               <div
@@ -283,7 +287,7 @@ export const Extension = (props: {
 
 
 
-      {/* <div
+      <div
         style={{
           background: "#fff",
           width: "100%",
@@ -331,7 +335,7 @@ export const Extension = (props: {
           </div>
 
         </table>
-      </div> */}
+      </div>
     </>
 
   );
