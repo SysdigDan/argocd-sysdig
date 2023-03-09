@@ -188,7 +188,7 @@ export const Extension = (props: {
               </div> */}
             </div>
 
-            <div style={{ flexGrow: 1, alignSelf: "flex-end" }}>
+            {/* <div style={{ flexGrow: 1, alignSelf: "flex-end" }}>
               {key.createdAt ? (
                 <Moment
                   style={{
@@ -207,7 +207,7 @@ export const Extension = (props: {
                   {key.createdAt}
                 </Moment>
               ) : null}
-            </div>
+            </div> */}
 
           </div>
         ))}
