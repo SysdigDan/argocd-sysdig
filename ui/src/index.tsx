@@ -172,7 +172,7 @@ export const Extension = (props: {
             >
               <div
                 style={{
-                  paddingRight: "25px",
+                  maxWidth: "400px",
                   flexGrow: 1,
                   }}
               >
