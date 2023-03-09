@@ -128,7 +128,7 @@ export const Extension = (props: {
         {data.map((val, key) => (
           <div
             // title={`Workload: ${val.labels.kubernetes.workload.name}`}
-            title={`Workload: ${[val.labels]["kubernetes.workload.name"]}`}
+            title={`Workload: ${val.labels["kubernetes.workload.name"]}`}
             style={{
               marginTop: "2rem",
               padding: "0.2rem",
