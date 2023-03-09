@@ -172,8 +172,7 @@ export const Extension = (props: {
             >
               <div
                 style={{
-                  maxWidth: "400px",
-                  flexGrow: 1,
+                  width: "400px",
                   }}
               >
                 <div
