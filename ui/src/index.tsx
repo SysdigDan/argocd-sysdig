@@ -142,7 +142,7 @@ export const Extension = (props: {
             <div
               style={{
                 width: "60px",
-                flexGrow: "1",
+                flexGrow: 1,
                 color: "#495763",
                 textAlign: "center",
               }}
@@ -155,7 +155,7 @@ export const Extension = (props: {
             </div>
             <div
               style={{
-                flexGrow: "100",
+                flexGrow: 100,
                 padding: "10px 20px 10px 10px",
                 lineHeight: ".95",
                 display: "flex",
@@ -186,7 +186,7 @@ export const Extension = (props: {
                 </a>
               </div>
             </div>
-            <div style={{ flexGrow: "1", alignSelf: "flex-end" }}>
+            <div style={{ flexGrow: 1, alignSelf: "flex-end" }}>
               {key.createdAt ? (
                 <Moment
                   style={{
@@ -202,7 +202,7 @@ export const Extension = (props: {
                   fromNow={true}
                   ago={true}
                 >
-                  {item.createdAt}
+                  {key.createdAt}
                 </Moment>
               ) : null}
             </div>
