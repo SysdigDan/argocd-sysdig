@@ -170,7 +170,11 @@ export const Extension = (props: {
                 flexDirection: "row",
               }}
             >
-              <div style={{ paddingRight: "25px" }}>
+              <div style={{
+                paddingRight: "25px",
+                flexGrow: 1,
+                }}
+              >
                 <div
                   style={{
                     fontSize: "1em",
@@ -221,7 +225,7 @@ export const Extension = (props: {
               <div
                 style={{
                   display: "flex",
-                  flexDirection: "row",
+                  flexGrow: 10,
                   justifyContent: "space-evenly",
                 }}
               >
