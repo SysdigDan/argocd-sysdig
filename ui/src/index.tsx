@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Moment from "react-moment";
+// import Moment from "react-moment";
 
 const MAP_VULN = {
   Critical: {
