@@ -165,11 +165,14 @@ export const Extension = (props: {
                 flexGrow: 100,
                 padding: "5px",
                 lineHeight: ".95",
-                display: "flex",
-                flexDirection: "row",
               }}
             >
-              <div style={{ paddingRight: "25px" }}>
+              <div
+                style={{
+                  float: "left",
+                  paddingRight: "25px"
+                }}
+              >
                 <div
                   style={{
                     fontSize: "1em",
@@ -181,6 +184,7 @@ export const Extension = (props: {
                   }}>
                   {val.recordDetails.labels["kubernetes.workload.name"]}
                 </div>
+
                 <div
                   style={{
                     fontSize: ".8em",
@@ -202,6 +206,7 @@ export const Extension = (props: {
                   }}>
                   Cluster: {val.recordDetails.labels["kubernetes.cluster.name"]}
                 </div>
+
                 <div
                   style={{
                     fontSize: ".8em",
@@ -212,41 +217,35 @@ export const Extension = (props: {
                   }}>
                   Namespace: {val.recordDetails.labels["kubernetes.namespace.name"]}
                 </div>
+
               </div>
 
               <div>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-evenly",
-                  }}
-                >
-                  {Object.keys(MAP_VULN).map((key) => (
-                    <div
+                {Object.keys(MAP_VULN).map((key) => (
+                  <div
+                    style={{
+                      margin: "1rem",
+                      // textAlign: "center",
+                      display: "flex",
+                      justifyContent: "space-evenly",
+                    }}
+                  >
+                    <i
+                      qe-id="utils-health-status-title"
+                      title={key}
+                      className={`fa fa-xl ${MAP_VULN[key].name}`}
                       style={{
-                        margin: "1rem",
-                        textAlign: "center",
-                        display: "flex",
-                        flexDirection: "column",
+                        color: MAP_VULN[key].color,
+                        marginBottom: "1rem",
+                        marginTop: "1rem",
                       }}
-                    >
-                      <i
-                        qe-id="utils-health-status-title"
-                        title={key}
-                        className={`fa fa-xl ${MAP_VULN[key].name}`}
-                        style={{
-                          color: MAP_VULN[key].color,
-                          marginBottom: "1rem",
-                          marginTop: "1rem",
-                        }}
-                      ></i>
-                      {key}:
-                      {/* {key}: {items.filter((item) => item.health.status == key).length} */}
-                    </div>
-                  ))}
-                </div>
+                    ></i>
+                    {key}:
+                    {/* {key}: {items.filter((item) => item.health.status == key).length} */}
+                  </div>
+                ))}
               </div>
+
 
 
 
