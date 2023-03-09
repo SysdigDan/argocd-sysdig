@@ -218,7 +218,37 @@ export const Extension = (props: {
               </div>
 
               <div>
-
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-evenly",
+                  }}
+                >
+                  {Object.keys(MAP_VULN).map((key) => (
+                    <div
+                      style={{
+                        margin: "1rem",
+                        textAlign: "center",
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
+                      <i
+                        qe-id="utils-health-status-title"
+                        title={key}
+                        className={`fa fa-xl ${MAP_VULN[key].name}`}
+                        style={{
+                          color: MAP_VULN[key].color,
+                          marginBottom: "1rem",
+                          marginTop: "1rem",
+                        }}
+                      ></i>
+                      {key}:
+                      {/* {key}: {items.filter((item) => item.health.status == key).length} */}
+                    </div>
+                  ))}
+                </div>
               </div>
 
 
