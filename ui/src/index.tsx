@@ -217,25 +217,49 @@ export const Extension = (props: {
               <div>
                 <div
                   style={{
-                    fontSize: "1em",
-                    fontWeight: "bold",
-                    paddingBottom: "15px",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                    textAlign: "left",
-                  }}>
-                  {val.recordDetails.labels["kubernetes.workload.name"]}</div>
-                <div
-                  style={{
-                    fontSize: ".8em",
-                    paddingBottom: "5px",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                    textAlign: "left",
-                  }}>
-                  Image: {val.recordDetails.mainAssetName}
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-evenly",
+                  }}
+                >
+                  {Object.keys(MAP_VULN).map((key) => (
+                    <div
+                      style={{
+                        margin: "1rem",
+                        textAlign: "center",
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
+                      <i
+                        qe-id="utils-health-status-title"
+                        title={key}
+                        className={`fa fa-xl ${MAP_VULN[key].name}`}
+                        style={{
+                          color: MAP_VULN[key].color,
+                          marginBottom: "1rem",
+                          marginTop: "1rem",
+                        }}
+                      ></i>
+                      {key}:
+                      {/* {key}: {items.filter((item) => item.health.status == key).length} */}
+                    </div>
+                  ))}
                 </div>
               </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
               {/* <div style={{ fontSize: ".8em" }}>
                 <i
