@@ -2,29 +2,29 @@ import * as React from 'react';
 
 const MAP_VULN = {
   Critical: {
-    name: "fa-heart",
+    name: "fa-shield",
     spin: false,
-    color: "rgb(24, 190, 148)"
+    color: "#AE44C5",
   },
   High: {
-    name: "fa-heart-broken",
+    name: "fa-shield",
     spin: false,
-    color: "rgb(233, 109, 118)",
+    color: "#EE635E",
   },
   Medium: {
-    name: "fa-pause-circle",
+    name: "fa-shield",
     spin: false,
-    color: "rgb(118, 111, 148)",
+    color: "#FA8C16",
   },
   Low: {
-    name: "fa-ghost",
+    name: "fa-shield",
     spin: false,
-    color: "rgb(244, 192, 48)"
+    color: "#F6CA09"
   },
   Negligible: {
-    name: "fa-question-circle",
+    name: "fa-shield",
     spin: false,
-    color: "rgb(204, 214, 221)",
+    color: "#91A7B3",
   },
 };
 
@@ -76,7 +76,9 @@ export const Extension = (props: {
           marginBottom: "10px",
         }}
       >
-        Sysdig Vulnerability Report - Application {props.resource.metadata.name}</div>
+        Sysdig Vulnerability Report - Application {props.resource.metadata.name}
+      </div>
+
       <div
         style={{
           background: "#fff",
@@ -119,6 +121,7 @@ export const Extension = (props: {
           ))}
         </div>
       </div>
+
       <div
         style={{
           background: "#fff",
@@ -126,7 +129,8 @@ export const Extension = (props: {
           boxShadow: "1px 1px 1px #ccd6dd",
           borderRadius: "4px",
           border: "1px solid transparent",
-          margin: "15px",
+          marginTop: "10px",
+          marginBottom: "10px",
         }}
       >
         <table>
@@ -156,7 +160,6 @@ export const Extension = (props: {
           })}
         </table>
       </div>
-
     </>
 
   );
