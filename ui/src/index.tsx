@@ -1,6 +1,6 @@
 import * as React from 'react';
 // import Moment from "react-moment";
-import "./custom.css";
+// import "./custom.css";
 
 const MAP_VULN = {
   Critical: {
