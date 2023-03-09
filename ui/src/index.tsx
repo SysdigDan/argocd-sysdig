@@ -127,7 +127,7 @@ export const Extension = (props: {
       <div style={{ display: "flex", flexDirection: "column", width: "40%" }}>
         {data.map((key) => (
           <div
-            title={`Kind: Application Namespace: ${key.namespace} Name: ${key.name}`}
+            title={`Name: ${key.mainAssetName}`}
             style={{
               marginTop: "2rem",
               padding: "0.2rem",
@@ -147,10 +147,10 @@ export const Extension = (props: {
                 textAlign: "center",
               }}
             >
-              <i title="Application" className="icon argo-icon-application"></i>
+              <i title="Workload" className="icon argo-icon-application"></i>
               <br />
               <div style={{ fontSize: ".7em", color: "#6d7f8b" }}>
-                application
+                workload
               </div>
             </div>
             <div
@@ -171,9 +171,9 @@ export const Extension = (props: {
                   textAlign: "left",
                 }}
               >
-                {key.name}
+                {key.mainAssetName}
               </div>
-              <div style={{ fontSize: ".8em" }}>
+              {/* <div style={{ fontSize: ".8em" }}>
                 <i
                   qe-id="utils-health-status-title"
                   title={key.health.status}
@@ -184,9 +184,9 @@ export const Extension = (props: {
                 <a href={`/applications/${key.name}`} title="Open application">
                   <i className="fa fa-external-link-alt"></i>
                 </a>
-              </div>
+              </div> */}
             </div>
-            <div style={{ flexGrow: 1, alignSelf: "flex-end" }}>
+            {/* <div style={{ flexGrow: 1, alignSelf: "flex-end" }}>
               {key.createdAt ? (
                 <Moment
                   style={{
@@ -205,7 +205,7 @@ export const Extension = (props: {
                   {key.createdAt}
                 </Moment>
               ) : null}
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
