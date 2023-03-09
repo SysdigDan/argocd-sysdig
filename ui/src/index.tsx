@@ -287,7 +287,7 @@ export const Extension = (props: {
 
 
 
-      <div
+      {/* <div
         style={{
           background: "#fff",
           width: "100%",
@@ -335,7 +335,7 @@ export const Extension = (props: {
           </div>
 
         </table>
-      </div>
+      </div> */}
     </>
 
   );
