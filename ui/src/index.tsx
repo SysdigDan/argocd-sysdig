@@ -228,7 +228,7 @@ export const Extension = (props: {
               <div
                 style={{
                   display: "flex",
-                  flexGrow: 10,
+                  flexGrow: 1,
                   justifyContent: "space-evenly",
                 }}
               >
