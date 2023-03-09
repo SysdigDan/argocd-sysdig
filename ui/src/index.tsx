@@ -184,7 +184,7 @@ export const Extension = (props: {
                     textOverflow: "ellipsis",
                     textAlign: "left",
                   }}>
-                  Image: {val.recordDetails.mainAssetName}<br />
+                  Image: {val.recordDetails.mainAssetName}
                 </div>
 
                 <div
