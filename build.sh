@@ -9,10 +9,11 @@ rm -f ./extension.tar
 cd ui
 yarn build
 
-# setup for psuh
-mv ./ui/dist/* ./
+# setup for push
+cp -R ./dist/* ../
+sleep 3
 
-# git commit
+# # git commit
 cd ..
 git add *
 git commit -m "updates"
