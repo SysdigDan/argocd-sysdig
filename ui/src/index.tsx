@@ -129,6 +129,11 @@ export const Extension = (props: {
         <table>
           <tr>
             <th>Name</th>
+            <th>Criical</th>
+            <th>High</th>
+            <th>Medium</th>
+            <th>Low</th>
+            <th>Negligible</th>
             <th>Exploits</th>
             <th>Status</th>
           </tr>
@@ -136,6 +141,11 @@ export const Extension = (props: {
             return (
               <tr key={key}>
                 <td>{val.recordDetails.mainAssetName}</td>
+                <td>{val.runningVulnsBySev[0] + val.runningVulnsBySev[1] + val.runningVulnsBySev[2]}</td>
+                <td>{val.runningVulnsBySev[3]}</td>
+                <td>{val.runningVulnsBySev[4] + val.runningVulnsBySev[5]}</td>
+                <td>{val.runningVulnsBySev[6]}</td>
+                <td>{val.runningVulnsBySev[7]}</td>
                 <td>{val.exploitCount}</td>
                 <td>{val.policyEvaluationsResult}</td>
               </tr>
