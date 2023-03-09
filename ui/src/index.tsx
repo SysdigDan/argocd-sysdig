@@ -173,7 +173,7 @@ export const Extension = (props: {
                   textAlign: "left",
                 }}
               >
-                {val.recordDetails.labels.kubernetes.workload.name}
+                {val.recordDetails.labels["kubernetes.workload.name"]}
               </div>
               {/* <div style={{ fontSize: ".8em" }}>
                 <i
