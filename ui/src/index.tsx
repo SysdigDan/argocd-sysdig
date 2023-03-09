@@ -72,8 +72,8 @@ export const Extension = (props: {
           fontWeight: "bold",
           textTransform: "uppercase",
           textAlign: "center",
-          marginTop: "15px",
-          marginBottom: "15px",
+          marginTop: "10px",
+          marginBottom: "10px",
         }}
       >
         Sysdig Vulnerability Report - Application {props.resource.metadata.name}</div>
@@ -84,8 +84,8 @@ export const Extension = (props: {
           boxShadow: "1px 1px 1px #ccd6dd",
           borderRadius: "4px",
           border: "1px solid transparent",
-          marginTop: "15px",
-          marginBottom: "15px",
+          marginTop: "10px",
+          marginBottom: "10px",
         }}
       >
         <div
