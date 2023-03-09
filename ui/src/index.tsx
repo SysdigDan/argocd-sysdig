@@ -68,7 +68,8 @@ export const Extension = (props: {
     <>
       <div
         style={{
-          fontSize: "15px",
+          fontSize: "20px",
+          fontWeight: "bold",
           textTransform: "uppercase",
           textAlign: "center",
         }}
