@@ -161,7 +161,7 @@ export const Extension = (props: {
                 padding: "10px 20px 10px 10px",
                 lineHeight: ".95",
                 display: "flex",
-                flexDirection: "column",
+                flexDirection: "row",
               }}
             >
               <div>
@@ -195,8 +195,17 @@ export const Extension = (props: {
                     textOverflow: "ellipsis",
                     textAlign: "left",
                   }}>
-                  Namespace: {val.recordDetails.labels["kubernetes.namespace.name"]}<br />
-                  Cluster: {val.recordDetails.labels["kubernetes.cluster.name"]}<br/>
+                  Cluster: {val.recordDetails.labels["kubernetes.cluster.name"]}
+                </div>
+                <div
+                  style={{
+                    fontSize: ".8em",
+                    paddingBottom: "5px",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    textAlign: "left",
+                  }}>
+                  Namespace: {val.recordDetails.labels["kubernetes.namespace.name"]}
                 </div>
               </div>
 
